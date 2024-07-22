@@ -2,6 +2,8 @@
     Author: Jacob Stone
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 body {
     height: 100vh;
     width: 100vw;
@@ -9,6 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Plus Jakarta Sans';
 }
 
 .calculator-container {
@@ -34,15 +37,30 @@ body {
 .top-row {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: space-between;
+    justify-content: space-between; /* Correct this line */
+    align-items: start; /* Correct this line */
     width: 100%;
-    height: 100%
+    height: auto; /* Adjust this line */
+    padding: 0 10px; /* Add some padding if needed */
 }
 
-.form {
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100%;
+    width: 100%; 
 }
+
+/* .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%
+} */
 
 .results-container {
     height: 100%;
@@ -51,4 +69,23 @@ body {
     border-radius: 15px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 75px;
+}
+
+.no-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    margin: 15px;
+}
+
+.no-results h2 {
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+}
+
+.no-results p {
+    color:  hsl(203, 41%, 72%);
 }

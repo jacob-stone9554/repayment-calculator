@@ -10,24 +10,34 @@
 <body>
   <div class="calculator-container">
     <div class="form-container">
-      <div class="form">
+      <form>
         <div class="top-row">
           <p>Mortgage Calculator</p>
-          <p>clear all</p>
+          <p>Clear All</p>
         </div>
-      </div>
+        <label>Mortgage Amount</label>
+        <input type="number">
+      </form>
     </div>
     <div class="results-container">
-      <p>Results container</p>
+      <!-- Empty results start -->
+      <div class="no-results">
+        <img src="assets/images/illustration-empty.svg" alt="empty results">
+        <h2>Results shown here</h2>
+        <p>Complete the form and click "calculate repayments" to see what your monthly payment would be.</p>
+      </div>
+      <!-- Empty results end -->
+      <!-- Completed results start -->
+      <div class="results"></div>
+      <!-- Completed results end -->
     </div>
   </div>
-  <!-- Empty results start -->
 
-  <!-- Empty results end -->
 
-  <!-- Completed results start -->
 
-  <!-- Completed results end -->
+
+
+
   
 </body>
 </html>
