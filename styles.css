@@ -22,7 +22,8 @@ body {
     align-items: center;
     height: 50%;
     width: 80%;
-    border-radius: 15px;
+    border-radius: 25px;
+    border: 1px solid black;
 }
 
 .form-container {
@@ -30,18 +31,23 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 35%;
     height: 100%;
+    border: 1px solid red;
+    margin-left: 100px;
+
 }
 
 .top-row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* Correct this line */
-    align-items: start; /* Correct this line */
+    justify-content: space-between; 
+    align-items: start; 
     width: 100%;
-    height: auto; /* Adjust this line */
-    padding: 0 10px; /* Add some padding if needed */
+    height: auto; 
+    padding: 0 10px;
+    border: 1px solid green;
+    margin-bottom: 50px;
 }
 
 form {
@@ -51,7 +57,53 @@ form {
     align-items: center;
     height: 100%;
     width: 100%; 
+    border: 1px solid blue;
 }
+
+.term-interest-row {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    border: 1px solid orange;
+    margin-bottom: 50px;
+}
+
+.mort-type label {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid purple;
+    margin-bottom: 50px;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-container i {
+    position: absolute;
+    left: 10px;
+    color: grey;
+  }
+
+  .input-container label {
+    margin-bottom: 5px;
+  }
+  
+  .input-container input {
+    padding-left: 30px; /* Adjust padding to make room for the icon */
+    height: 40px; /* Adjust as necessary */
+    width: 100%; /* Adjust as necessary */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
 
 /* .form {
     display: flex;

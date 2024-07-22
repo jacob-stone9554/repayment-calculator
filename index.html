@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <title>Mortgage repayment calculator</title>
 </head>
@@ -11,15 +12,39 @@
   <div class="calculator-container">
     <div class="form-container">
       <form>
+
         <div class="top-row">
           <p>Mortgage Calculator</p>
-          <p>Clear All</p>
+          <a href="#">Clear All</a>
         </div>
-        <label>Mortgage Amount</label>
-        <input type="number">
+
+        <div class="input-container">
+          <label for="amount">Mortgage Amount</label>
+          <i class="fas fa-dollar-sign"></i>
+          <input type="number" name="amount" id="amount" />
+        </div>
+
+        <div class="term-interest-row">
+          <label for="term">Mortgage Term</label>
+          <input type="number" name="term" id="term" />
+          <label for="interest">Interest Rate</label>
+          <input type="number" inputmode="decimal" name="interest" id="interest" />
+        </div>
+
+        <div class="mort-type">
+          <label for="type">
+            Mortgage Type
+            <input type="radio" name="repayment" value="repayment"> Repayment
+            <input type="radio" name="interestOnly" value="interestOnly"> Interest Only
+          </label>
+        </div>
+
+        <button type="submit">Calculate repayments</button>
       </form>
     </div>
+
     <div class="results-container">
+
       <!-- Empty results start -->
       <div class="no-results">
         <img src="assets/images/illustration-empty.svg" alt="empty results">
@@ -27,18 +52,13 @@
         <p>Complete the form and click "calculate repayments" to see what your monthly payment would be.</p>
       </div>
       <!-- Empty results end -->
+
       <!-- Completed results start -->
       <div class="results"></div>
       <!-- Completed results end -->
     </div>
+    
   </div>
-
-
-
-
-
-
-  
 </body>
 </html>
 
