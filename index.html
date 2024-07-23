@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
@@ -12,37 +12,24 @@
   <div class="calculator-container">
     <div class="form-container">
       <form>
-
-        <div class="top-row">
-          <p>Mortgage Calculator</p>
-          <a href="#">Clear All</a>
+        <label for="mortgage-amount">Mortgage Amount</label>
+        <input type="number" id="mortgage-amount" name="mortgage-amount" placeholder="£">
+    
+        <label for="mortgage-term">Mortgage Term</label>
+        <input type="number" id="mortgage-term" name="mortgage-term" placeholder="years">
+    
+        <label for="interest-rate">Interest Rate</label>
+        <input type="number" inputmode="decimal" id="interest-rate" name="interest-rate" placeholder="%">
+    
+        <div class="radio-group">
+          <label>Mortgage Type</label>
+          <label><input type="radio" name="mortgage-type" value="repayment"> Repayment</label>
+          <label><input type="radio" name="mortgage-type" value="interest-only"> Interest Only</label>
         </div>
-
-        <div class="input-container">
-          <label for="amount">Mortgage Amount</label>
-          <i class="fas fa-dollar-sign"></i>
-          <input type="number" name="amount" id="amount" required/>
-        </div>
-
-        <div class="term-interest-row">
-          <label for="term">Mortgage Term</label>
-          <input type="number" name="term" id="term" />
-          <label for="interest">Interest Rate</label>
-          <input type="number" inputmode="decimal" name="interest" id="interest" />
-        </div>
-
-        <div class="mort-type">
-          <label for="type">
-            Mortgage Type
-            <input type="radio" name="repayment" value="repayment"> Repayment
-            <input type="radio" name="interestOnly" value="interestOnly"> Interest Only
-          </label>
-        </div>
-
-        <button type="submit"><i class="fas fa-calculator"></i>Calculate Repayments</button>
+    
+        <button type="submit" class="submit-btn" id="submit">Calculate Repayments</button>
       </form>
     </div>
-
     <div class="results-container">
 
       <!-- Empty results start -->
@@ -57,8 +44,9 @@
       <div class="results"></div>
       <!-- Completed results end -->
     </div>
-    
   </div>
+  </div>
+  <script src="index.js"></script>
 </body>
 </html>
 
@@ -82,16 +70,16 @@ Mortgage Calculator
 
   Results shown here
 
-  Complete the form and click “calculate repayments” to see what 
+  Complete the form and click “calculate repayments” to see what
   your monthly repayments would be.
 
-  EMPTY RESULTS END 
+  EMPTY RESULTS END
 
   COMPLETED RESULTS START
 
   Your results
 
-  Your results are shown below based on the information you provided. 
+  Your results are shown below based on the information you provided.
   To adjust the results, edit the form and click “calculate repayments” again.
 
   Your monthly repayments
@@ -99,4 +87,40 @@ Mortgage Calculator
   Total you'll repay over the term
 
   COMPLETED RESULTS END
+
+
+
+  <div class="form-container">
+      <form>
+
+        <div class="top-row">
+          <p>Mortgage Calculator</p>
+          <a href="#">Clear All</a>
+        </div>
+
+        <div class="input-container">
+          <label for="amount">Mortgage Amount</label>
+            <i class="fas fa-dollar-sign"></i>
+            <input type="number" name="amount" id="amount" required/>
+        </div>
+
+        <div class="term-interest-row">
+          <label for="term">Mortgage Term</label>
+          <input type="number" name="term" id="term" required/>
+          <label for="interest">Interest Rate</label>
+          <input type="number" inputmode="decimal" name="interest" id="interest" required/>
+        </div>
+
+        <div class="mort-type">
+          <label for="type">
+            Mortgage Type
+            <input type="radio" name="repayment" value="repayment" required> Repayment
+            <input type="radio" name="interestOnly" value="interestOnly" required> Interest Only
+          </label>
+        </div>
+
+        <button type="submit"><i class="fas fa-calculator"></i>Calculate Repayments</button>
+      </form>
+
+
 -->

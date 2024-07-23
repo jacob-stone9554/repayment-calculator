@@ -1,6 +1,4 @@
-/*
-    Author: Jacob Stone
-*/
+
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
@@ -26,108 +24,119 @@ body {
     border: 1px solid black;
 }
 
+/* Container */
 .form-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 35%;
-    height: 100%;
-    border: 1px solid red;
-    margin-left: 100px;
-
-}
-
-.top-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
-    align-items: start; 
-    width: 100%;
-    height: auto; 
-    padding: 0 10px;
-    border: 1px solid green;
-    margin-bottom: 50px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100%;
-    width: 100%; 
-    border: 1px solid blue;
-}
-
-form button {
-    height: 50px;
-    width: 300px;
-    border-radius: 30px;
-    background-color: hsl(61, 70%, 52%);
-    border: none;
-    font-size: 20px;
-    font-weight: 700;
-    color: hsl(202, 55%, 16%);
-}
-
-form button i {
-    margin-right: 15px;
-}
-
-.term-interest-row {
-    display: flex;
-    flex-direction: row;
-    height: auto;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 25px;
-    border: 1px solid orange;
-    margin-bottom: 50px;
-}
-
-.mort-type label {
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid purple;
-    margin-bottom: 50px;
-}
-
-.input-container {
-    position: relative;
-    display: flex;
-    align-items: center;
+    width: 50%;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
   }
   
-  .input-container i {
-    position: absolute;
-    left: 10px;
-    color: grey;
-  }
-
-  .input-container label {
+  /* Labels */
+  .form-container label {
+    font-size: 14px;
+    color: #333;
     margin-bottom: 5px;
   }
   
-  .input-container input {
-    padding-left: 30px; /* Adjust padding to make room for the icon */
-    height: 40px; /* Adjust as necessary */
-    width: 100%; /* Adjust as necessary */
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  /* Input Fields */
+  .form-container input[type="text"],
+  .form-container input[type="number"] {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
     box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
   }
 
-/* .form {
+  /*Placeholders*/
+  .form-container input[type="text"]::placeholder,
+  .form-container input [type="number"]::placeholder {
+    opacity: 1;
+    background-color:  hsl(203, 41%, 72%);
+  }
+
+  /* Placeholder background simulation */
+.form-container input[type="text"]:not(:placeholder-shown)::before,
+.form-container input[type="number"]:not(:placeholder-shown)::before {
+    content: attr(placeholder);
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: transparent;
+    background: hsl(203, 41%, 72%);
+    padding: 0 5px;
+    pointer-events: none;
+    z-index: -1;
+}
+  
+  .form-container input[type="text"]:focus,
+  .form-container input[type="number"]:focus {
+    border-color: #5ec8a0;
+    box-shadow: 0 0 5px rgba(94, 200, 160, 0.3);
+    outline: none;
+  }
+  
+  /* Select Field */
+  .form-container select {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .form-container select:focus {
+    border-color: #5ec8a0;
+    box-shadow: 0 0 5px rgba(94, 200, 160, 0.3);
+    outline: none;
+  }
+  
+  /* Radio Buttons */
+  .form-container .radio-group {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%
-} */
+    margin-bottom: 20px;
+  }
+  
+  .form-container .radio-group label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .form-container .radio-group input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  /* Submit Button */
+  .form-container .submit-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #5ec8a0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .form-container .submit-btn:hover {
+    background-color: #52b894;
+  }
+
+
 
 .results-container {
     height: 100%;
@@ -156,3 +165,6 @@ form button i {
 .no-results p {
     color:  hsl(203, 41%, 72%);
 }
+
+  
+  
